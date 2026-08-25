@@ -6,6 +6,9 @@ const cors = require('cors');
 const app = express();
 app.use(cors()); 
 app.use(express.json()); 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/gate2026_final.html');
+});
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ Connected to MongoDB'))
