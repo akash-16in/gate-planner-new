@@ -529,7 +529,7 @@ let D = {};
 const sv = () => {}; 
 async function loadData() {
   try {
-    const response = await fetch('http://localhost:5000/api/days');
+    const response = await fetch('/api/days/...')
     D = await response.json();
     render(); 
   } catch (error) { console.error('No backend:', error); }
